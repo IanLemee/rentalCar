@@ -1,0 +1,296 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white-grey);
+}
+
+.text-field {
+    font-size: 64px;
+    font-weight: 700;
+    width: 100%;
+    margin-right: 32px;
+    margin-left: 140px;
+}
+
+span {
+    color: var(--blue);
+}
+
+.paragraph {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--grey);
+    margin: 16px 0 32px 0;
+}
+
+/* .second-hero {
+    display: flex;
+    justify-content: center;    
+    width: 1160px;
+}
+
+.list-location {
+    padding: 21px 210px 21px 32px;
+    border: 1px solid var(--white-grey);
+    background-color: aqua;
+}
+
+.list-date {
+    padding: 0 10px;
+} */
+
+.list-logo_cars {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+/* Scroll animation */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(100%);
+    transition: all 2s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+.hero3 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 132px;
+}
+
+.paragraph-hero3 {
+    font-size: 16px;
+    color: var(--paragraph);
+    font-weight: 500;
+}
+
+.text-h2 {
+    font-size: 32px;
+    color: var(--button-color);
+    font-weight: 400;
+    margin: 16px 0 54px 0;
+}
+
+.three-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Div location */
+
+.location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-location {
+    background-color: var(--white);
+    border-radius: 24px;
+    width: 129px;
+    height: 129px;
+    box-shadow: 0px 12px 32px rgba(169, 169, 173, 0.16);
+}
+
+.icon-location img {
+    padding: 38px 0;
+}
+
+.text-location {
+    font-size: 20px;
+    color: var(--button-color);
+    font-weight: 400;
+    margin: 40px 0 16px 0;
+}
+
+.paragraph-location {
+    font-size: 16px;
+    color: var(--grey);
+    width: 60%;
+}
+
+/* Div Date */
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-date {
+    background: radial-gradient(115.89% 115.89% at 49.61% 115.89%, #3083FF 0%, #87B5FB 100%);
+    border-radius: 24px;
+    width: 129px;
+    height: 129px;
+    box-shadow: 0px 16px 32px rgba(48, 131, 255, 0.3);
+}
+
+.icon-date img {
+    padding: 38px 0;
+}
+
+.text-date {
+    font-size: 20px;
+    color: var(--button-color);
+    font-weight: 400;
+    margin: 40px 0 16px 0;
+}
+
+.paragraph-date {
+    font-size: 16px;
+    color: var(--grey);
+    width: 60%;
+}
+
+/* Div book-your-car */
+
+.book_your_car {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-book_your_car {
+    background-color: var(--white);
+    border-radius: 24px;
+    width: 129px;
+    height: 129px;
+    box-shadow: 0px 12px 32px rgba(169, 169, 173, 0.16);
+}
+
+.icon-book_your_car img {
+    padding: 38px 0;
+}
+
+.text-car {
+    font-size: 20px;
+    color: var(--button-color);
+    font-weight: 400;
+    margin: 40px 0 16px 0;
+}
+
+.paragraph-car {
+    font-size: 16px;
+    color: var(--grey);
+    width: 60%;
+}
+
+.dashed {
+    border: 2px dashed var(--paragraph);
+    transform: rotate(90deg);
+}
+
+.hero4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 120px;
+}
+
+.div-margin {
+    margin-left: 30px;
+}
+
+.paragraph-top-hero4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--paragraph);
+    margin-bottom: 16px;
+}
+
+.title-top-hero4 {
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--button-color);
+    text-transform: uppercase;
+    margin-bottom: 32px;
+}
+
+.text__area {
+    display: flex;
+    align-items: center;
+}
+
+.tittle-hero4 {
+    font-size: 18px;
+    color: var(--button-color);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.paragraph-hero4 {
+    font-size: 14;
+    font-weight: 400;
+    color: var(--grey);
+}
+
+.hero5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.paragraph-hero5 {
+    color: var(--paragraph);
+    text-transform: uppercase;
+}
+
+.title-hero5 {
+    color: var(--button-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 32px;
+    margin: 16px 0 54px 0;
+}
+
+.button-hero5{
+    margin: 54px 0 132px 0;
+    border-radius: 40px;
+    background-color: var(--white);
+    border: 1px solid var(--white-grey);
+    padding: 16px 40px;
+}
+
+.span-button {
+    color: var(--button-color);
+    display: flex;
+    align-items: center;
+}
+
+.span-button img {
+    padding: 0 10px;
+}
+
+/* @media (max-width: 1048px) {
+    .hero {
+        flex-direction: column;
+        background-color: var(--white);
+    }
+
+    .text-field {
+        text-align: center;
+    }
+
+    .img-field {
+        margin-left: 170px;
+    }
+} */
+
