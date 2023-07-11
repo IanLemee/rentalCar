@@ -13,7 +13,7 @@
     margin-left: 140px;
 }
 
-span {
+.Easy-blue {
     color: var(--blue);
 }
 
@@ -61,6 +61,19 @@ span {
     filter: blur(0);
     transform: translateY(0);
 }
+
+.cars:nth-child(2) {
+    transition-delay: 200ms;
+}
+
+.cars:nth-child(3) {
+    transition-delay: 400ms;
+}
+
+.cars:nth-child(4) {
+    transition-delay: 600ms;
+}
+
 
 h1 {
     font-size: 50px;
@@ -277,6 +290,86 @@ h1 {
 
 .span-button img {
     padding: 0 10px;
+}
+
+.lista-carros {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 24px;
+}
+
+.hero6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tittle-hero6 {
+    text-align: center;
+}
+
+.img-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.testimonials {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--paragraph);
+    text-transform: uppercase;
+}
+
+.aboutUs {
+    font-size: 2rem;
+    color: var(--button-color);
+    font-weight: 400;
+
+    margin: 1rem 0 3rem 0;
+}
+
+.btn-arrow {
+    border: none;
+    background-color: transparent;
+}
+
+.description-img {
+    width: 300px;
+
+    color: var(--button-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+}
+
+.name-img {
+    color: var(--button-color);
+    font-size: 2rem;
+    font-weight: 400;
+
+    margin-bottom: 0.8rem;
+}
+
+.rating {
+    margin-bottom: 3.5rem;
+}
+
+.btn {
+    width: 24px;
+    height: 6px;
+    cursor: pointer;
+    background-color: var(--white-grey);
+    border-radius: 2px;
+    border: none;
+}
+
+.final-hero {
+    position: relative;
+    text-align: center;
+    top: 12em;
 }
 
 /* @media (max-width: 1048px) {
