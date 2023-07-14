@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@import url(./styles/header.css);
+@import url(./styles/hero.css);
+@import url(./styles/login.css);
+@import url(./styles/footer.css);
+
+:root {
+    --button-color: #1D1E21;
+    --white: #FFF;
+    --blue: #3083FF;
+    --blue-menu: #0085FF;
+    --grey: #929395;
+    --white-grey: #EBEBEB;
+    --paragraph: #ACAEB4;
+    --font: 'Roboto';
+    --color: #BFBFBF;
+    --background-cars: #F7F7FB;
+    --footer: #1E242D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--white);
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 400;
+}
