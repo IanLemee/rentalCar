@@ -14,8 +14,9 @@
 <body>
     <header>
         <!-- class Hidden para Scroll animation -->
-        <nav class="hidden navbar">
+        <nav class="navbar">
             <a class="icon-button" href="index.html"><img class="icon-img" src="./assetts/Logo.svg" alt="Icon Logo"></a>
+            <button class="btn-mobile">menu</button>
             <ul class="navbar-buttons">
                 <li class="navbar-list"><a class="navbar-links" href="#">Become a renter</a></li>
                 <li class="navbar-list"><a class="navbar-links" href="#">Rental deals</a></li>
@@ -93,7 +94,7 @@
             </ul>
         </section>
 
-        <section class="hidden hero3">
+        <section class="hero3">
             <div>
                 <p class="paragraph-hero3">HOW IT WORK</p>
                 <h2 class="text-h2">Rent with following 3 working steps</h2>
@@ -196,26 +197,28 @@
 
             <div class="img-text">
                 <div>
-                    <button class="btn-arrow"><img src="/assetts/Arrow2.svg" alt=""></button>
+                    <button class="btn-arrow" data-btn="prev"><img src="/assetts/Arrow2.svg" alt=""></button>
                 </div>
-                <img src="/assetts/Rectangle 26.svg" alt="">
-                <div>
-                    <h2 class="description-img">There are many variations of passages a but Nullam vulputate urna,
-                        adipiscing vulputate mauris nisl sagittis et. Quisque id semper est nullam enim leo in nec
-                        laoreet.</h2>
-                    <h3 class="name-img">Charlie Johnson</h3>
-                    <img class="rating" src="/assetts/Frame 31.svg" alt="">
-
+                <div class="teste">
+                    <img src="/assetts/Rectangle 26.svg" alt="">
                     <div>
-                        <button class="btn"></button>
-                        <button class="btn"></button>
-                        <button class="btn"></button>
-                        <button class="btn"></button>
+                        <h2 class="description-img">There are many variations of passages a but Nullam vulputate urna,
+                            adipiscing vulputate mauris nisl sagittis et. Quisque id semper est nullam enim leo in nec
+                            laoreet.</h2>
+                        <div class="informations">
+                            <h3 class="name-img">Charlie Johnson</h3>
+                            <img class="rating" src="/assetts/Frame 31.svg" alt="">
+                            <div>
+                                <button class="btn" data-botao="1"></button>
+                                <button class="btn" data-botao="2"></button>
+                                <button class="btn" data-botao="3"></button>
+                                <button class="btn" data-botao="4"></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div>
-                    <button class="btn-arrow"><img src="/assetts/Arrow3.svg" alt=""></button>
+                    <button class="btn-arrow" data-btn="next"><img src="/assetts/Arrow3.svg" alt=""></button>
                 </div>
             </div>
         </section>
