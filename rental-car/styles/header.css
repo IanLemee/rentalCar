@@ -8,6 +8,10 @@ header {
     padding: 2em 8.75em;
 }
 
+.btn-mobile {
+    display: none;
+}
+
 .navbar-buttons {
     display: flex;
     align-items: center;
@@ -41,11 +45,18 @@ header {
 }
 
 @media (max-width: 1048px) {
+    .btn-mobile {
+        display: block;
+    }
+
     .navbar-buttons {
         display: none;
     }
 
     .navbar {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
         background-color: var(--white);
     }
 

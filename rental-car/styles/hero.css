@@ -378,11 +378,23 @@ h1 {
     text-align: center;
 }
 
+.teste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
 .img-text {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+}
+
+.informations {
+    display: flex;
+    flex-direction: column;
 }
 
 .testimonials {
@@ -435,13 +447,17 @@ h1 {
     border: none;
 }
 
+.btn:focus {
+    background-color: var(--blue);
+}
+
 .final-hero {
     position: relative;
     text-align: center;
     top: 8em;
 }
 
-/* @media (max-width: 1048px) {
+@media (max-width: 1048px) {
     .hero {
         flex-direction: column;
         background-color: var(--white);
@@ -454,5 +470,11 @@ h1 {
     .img-field {
         margin-left: 170px;
     }
-} */
+
+    .lista-carros {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
 

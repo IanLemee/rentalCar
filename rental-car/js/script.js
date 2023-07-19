@@ -1,52 +1,79 @@
 const botao = document.querySelectorAll('.btn')
-const btn = document.querySelector('.btn-arrow')
+const btn = document.querySelectorAll('.btn-arrow')
+
+var contador = 0;
 
 const pessoas = [
     {
-        "nome": "Gabriel Sampaio",
-        "Avaliacao": "4.8",
-        "texto": "eu to traindo todo dia",
-        "foto": "url(/assetts/gDoCaveirao.jpeg)"
+        nome: "Charlie Johnson",
+        Avaliacao: "4.8",
+        texto: "There are many variations of passages a but Nullam vulputate urna,adipiscing vulputate mauris nisl sagittis et. Quisque id semper est nullam enim leo in neclaoreet.",
+        foto: "/assetts/Rectangle 26.svg"
     },
 
     {
-        "nome": "Eros Alexandre",
-        "Avaliacao": "4.6",
-        "texto": "eu to metendo todo dia",
-        "foto": "url(/assetts/erzPagaPensaoMilionaria.jpeg)"
+        nome: "Gabriel Sampaio",
+        Avaliacao: "4.8",
+        texto: "O Melhor site para alugar carros disponivel hoje em dia, voltarei para alugar mais carros aqui sem via de Duvidas!",
+        foto: "/assetts/Gabriel.svg"
     },
 
     {
-        "nome": "Joao Pedro",
-        "Avaliacao": "4.6",
-        "texto": "Faz tempo que eu nao meto",
-        "foto": "url(/assetts/joePutinho.jpeg)"
+        nome: "Eros Alexandre",
+        Avaliacao: "4.6",
+        texto: "O site de aluguel de carros é simplesmente incrível! A navegação é intuitiva e o processo de reserva é extremamente fácil e rápido!",
+        foto: "/assetts/Eros.svg"
+    },
+
+    {
+        nome: "Joao Pedro",
+        Avaliacao: "4.6",
+        texto: "Que maravilha de site de aluguel de carros! Fiquei impressionado com a transparência nas informações sobre preços e condições. A equipe de suporte também é muito prestativa!",
+        foto: "/assetts/Joe.svg"
     }
 ]
 
-let joe = JSON.stringify(pessoas)
+const btnMudarPessoa = (evento) => {
+    const clicked = evento.currentTarget.getAttribute('data-botao')
+    console.log(evento.currentTarget);
+}
 
-btn.addEventListener('click', () => {
-    
-    
-    return btn
+botao.forEach((botao) => botao.addEventListener('focus', btnMudarPessoa))
+
+btn.forEach(function (btnarrow) {
+    btnarrow.addEventListener('click', event => {
+        mudarPessoa(event)
+        const aparecerPessoa = document.querySelector('.teste').innerHTML = `
+            <img src="${pessoas[contador].foto}" alt="">
+            <div>
+                <h2 class="description-img">${pessoas[contador].texto}</h2>
+                <h3 class="name-img">${pessoas[contador].nome}</h3>
+                <div>
+                        <div class="informations">
+                            <img class="rating" src="/assetts/Frame 31.svg" alt="">
+                            <div>
+                                <button class="btn" data-btn="1"></button>
+                                <button class="btn" data-btn="2"></button>
+                                <button class="btn" data-btn="3"></button>
+                                <button class="btn" data-btn="4"></button>
+                            </div>
+                        </div>
+                    </div>
+            </div>`
+    })
 })
 
-// botao.forEach(function(btn) {
-//     btn.addEventListener('click', function(e) {
-      
-//         console.log(e.target);
-           
-//             document.querySelector('.img-text').innerHTML = `
-//         <img src="/assetts/Rectangle 26.svg" alt="">
-//         <div>
-//             <h2 class="description-img">There are many variations of passages a but Nullam vulputate urna,
-//                 adipiscing vulputate mauris nisl sagittis et. Quisque id semper est nullam enim leo in nec
-//                 laoreet.</h2>
-//             <h3 class="name-img">Charlie Johnson</h3>
-//             <img class="rating" src="/assetts/Frame 31.svg" alt="">`
-       
+function mudarPessoa(event) {
+    const clickPessoa = event.currentTarget.getAttribute('data-btn')
+    if (clickPessoa === "prev") {
+        contador--
+    } else if (clickPessoa === "next") {
+        contador++
+    }
 
-//         btn.style.backgroundColor = '#3083FF'
-//     })
-// })
+    if (contador == 4) {
+        contador = 0
+    } else if (contador == -1) {
+        contador = 3
+    }
+}
