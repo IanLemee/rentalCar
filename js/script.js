@@ -33,47 +33,46 @@ const pessoas = [
     }
 ]
 
-const btnMudarPessoa = (evento) => {
-    const clicked = evento.currentTarget.getAttribute('data-botao')
-    console.log(evento.currentTarget);
-}
+botao.forEach(function (botao) {
+    botao.addEventListener('click', event => {
+        console.log(event.currentTarget.getAttribute('data-botao'));
+        mudarPessoa(event, event.currentTarget.getAttribute('data-botao'))
 
-botao.forEach((botao) => botao.addEventListener('focus', btnMudarPessoa))
+    })
+})
 
 btn.forEach(function (btnarrow) {
     btnarrow.addEventListener('click', event => {
         mudarPessoa(event)
-        const aparecerPessoa = document.querySelector('.teste').innerHTML = `
-            <img src="${pessoas[contador].foto}" alt="">
-            <div>
-                <h2 class="description-img">${pessoas[contador].texto}</h2>
-                <h3 class="name-img">${pessoas[contador].nome}</h3>
-                <div>
-                        <div class="informations">
-                            <img class="rating" src="/assetts/Frame 31.svg" alt="">
-                            <div>
-                                <button class="btn" data-btn="1"></button>
-                                <button class="btn" data-btn="2"></button>
-                                <button class="btn" data-btn="3"></button>
-                                <button class="btn" data-btn="4"></button>
-                            </div>
-                        </div>
-                    </div>
-            </div>`
+
     })
 })
 
-function mudarPessoa(event) {
-    const clickPessoa = event.currentTarget.getAttribute('data-btn')
-    if (clickPessoa === "prev") {
-        contador--
-    } else if (clickPessoa === "next") {
-        contador++
+function mudarPessoa(event, cont = -1) {
+    document.querySelector('.btn-ativo').classList.remove('btn-ativo')
+
+    if ((cont >= 0) && (cont <= 3)) {
+        contador = cont
+    } else {
+        const clickPessoa = event.currentTarget.getAttribute('data-btn')
+        if (clickPessoa === "prev") {
+            contador--
+        } else if (clickPessoa === "next") {
+            contador++
+        }
+
+        if (contador == 4) {
+            contador = 0
+        } else if (contador == -1) {
+            contador = 3
+        }
     }
 
-    if (contador == 4) {
-        contador = 0
-    } else if (contador == -1) {
-        contador = 3
-    }
+    var editado = document.querySelectorAll('.editavel')
+    
+    editado[0].setAttribute('src', `${pessoas[contador].foto}`)
+    editado[1].textContent = `${pessoas[contador].texto}`
+    editado[2].textContent = `${pessoas[contador].nome}`
+
+    document.querySelectorAll('.btn')[contador].classList.add('btn-ativo')
 }
