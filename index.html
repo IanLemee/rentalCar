@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>RentalCar</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -16,15 +16,27 @@
         <!-- class Hidden para Scroll animation -->
         <nav class="navbar">
             <a class="icon-button" href="index.html"><img class="icon-img" src="./assetts/Logo.svg" alt="Icon Logo"></a>
-            <button class="btn-mobile">menu</button>
+            <button onclick="menuShow()" class="btn-mobile">menu</button>
+
+            
+
+            </div>
             <ul class="navbar-buttons">
-                <li class="navbar-list"><a class="navbar-links" href="#">Become a renter</a></li>
-                <li class="navbar-list"><a class="navbar-links" href="#">Rental deals</a></li>
-                <li class="navbar-list"><a class="navbar-links" href="#">How it work?</a></li>
-                <li class="navbar-list"><a class="navbar-links" href="#">Why choose us</a></li>
-                <li class="navbar-list"><a class="navbar-links" href="login.html">Login</a></li>
+                <li class="navbar-list ativo" data-ativo="Become a renter"><a class="navbar-links" href="#">Become a renter</a></li>
+                <li class="navbar-list ativo" data-ativo="Rental deals"><a class="navbar-links" href="#">Rental deals</a></li>
+                <li class="navbar-list ativo" data-ativo="How it work?"><a class="navbar-links" href="#">How it work?</a></li>
+                <li class="navbar-list ativo" data-ativo="Why choose us"><a class="navbar-links" href="#">Why choose us</a></li>
+                <li class="navbar-list ativo" data-ativo="Login"><a class="navbar-links" href="login.html">Login</a></li>
             </ul>
         </nav>
+        <div class="menu-mobile">
+            <ul class="navbar-buttons-menu ativado">
+                <li class="navbar-list ativo" data-ativo="Become a renter"><a class="navbar-links" href="#">Become a renter</a></li>
+                <li class="navbar-list ativo" data-ativo="Rental deals"><a class="navbar-links" href="#">Rental deals</a></li>
+                <li class="navbar-list ativo" data-ativo="How it work?"><a class="navbar-links" href="#">How it work?</a></li>
+                <li class="navbar-list ativo" data-ativo="Why choose us"><a class="navbar-links" href="#">Why choose us</a></li>
+                <li class="navbar-list ativo" data-ativo="Login"><a class="navbar-links" href="login.html">Login</a></li>
+            </ul>
     </header>
 
     <main>
@@ -40,7 +52,8 @@
                 </div>
             </div>
             <div class="img-field">
-                <img src="./assetts/Red Mazda Car Hero1 - 1180x664 1.svg" alt="Mazda Car">
+                <img class="carro-hero" src="./assetts/Red Mazda Car Hero1 - 1180x664 1.svg" alt="Mazda Car">
+                <img class="car-hero-responsive" src="/assetts/RedMazdaCarInteiro.svg" alt="">
             </div>
         </section>
 
@@ -128,9 +141,9 @@
 
         <section class="hero4">
             <div>
-                <img src="./assetts/Image.svg" alt="">
+                <img class="hero4-car" src="./assetts/Image.svg" alt="">
             </div>
-            <div>
+            <div class="garantias">
                 <div class="div-margin">
                     <p class="paragraph-top-hero4">Why choose us</p>
                     <h2 class="title-top-hero4">We offer the best experience with our rental deals</h2>
@@ -219,13 +232,13 @@
                 </div>
                 
                 <div>
-                    <button class="btn-arrow" data-btn="next"><img src="/assetts/Arrow3.svg" alt=""></button>
+                    <button class="btn-arrow" id="btn-next" data-btn="next"><img src="/assetts/Arrow3.svg" alt=""></button>
                 </div>
             </div>
         </section>
 
         <section class="final-hero">
-            <img src="assetts/Download app - section.svg" alt="">
+            <img class="final-hero-img" src="assetts/Download app - section.svg" alt="">
         </section>
 
 

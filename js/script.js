@@ -1,5 +1,7 @@
 const botao = document.querySelectorAll('.btn')
 const btn = document.querySelectorAll('.btn-arrow')
+const btnMenu = document.querySelector('.btn-mobile')
+const ativado = document.querySelectorAll('.ativo')
 
 var contador = 0;
 
@@ -33,9 +35,18 @@ const pessoas = [
     }
 ]
 
+function menuShow() {
+    let menuMobile = document.querySelector('.menu-mobile')
+    if (menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open')
+        console.log('oi');
+    } else {
+        menuMobile.classList.add('open')
+    }
+}
+
 botao.forEach(function (botao) {
     botao.addEventListener('click', event => {
-        console.log(event.currentTarget.getAttribute('data-botao'));
         mudarPessoa(event, event.currentTarget.getAttribute('data-botao'))
 
     })
@@ -44,7 +55,6 @@ botao.forEach(function (botao) {
 btn.forEach(function (btnarrow) {
     btnarrow.addEventListener('click', event => {
         mudarPessoa(event)
-
     })
 })
 
@@ -53,7 +63,8 @@ function mudarPessoa(event, cont = -1) {
 
     if ((cont >= 0) && (cont <= 3)) {
         contador = cont
-    } else {
+    }
+    else {
         const clickPessoa = event.currentTarget.getAttribute('data-btn')
         if (clickPessoa === "prev") {
             contador--
@@ -69,10 +80,16 @@ function mudarPessoa(event, cont = -1) {
     }
 
     var editado = document.querySelectorAll('.editavel')
-    
+
     editado[0].setAttribute('src', `${pessoas[contador].foto}`)
     editado[1].textContent = `${pessoas[contador].texto}`
     editado[2].textContent = `${pessoas[contador].nome}`
 
     document.querySelectorAll('.btn')[contador].classList.add('btn-ativo')
 }
+
+function loop() {
+    document.getElementById("btn-next").click();
+}
+  
+window.setInterval(loop, 4000);
