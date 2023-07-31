@@ -17,7 +17,7 @@
 .text-field {
     font-size: 64px;
     font-weight: 700;
-    max-width: 100%;
+    width: 100%;
     margin-right: 2rem;
     margin-left: 8.75rem;
 }
@@ -469,8 +469,7 @@ h1 {
 @media (max-width: 768px) {
     .hero {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        padding-right: 20%;
         flex-direction: column;
         background-color: var(--white);
     }
@@ -481,7 +480,8 @@ h1 {
 
     .car-hero-responsive {
         display: block;
-        width: 80%;
+        max-width: 20rem;
+        padding-right: 20%;
         margin-bottom: 2rem;
     }
 
@@ -493,6 +493,7 @@ h1 {
         padding: 1rem 0;
         text-align: center;
         align-items: center;
+        margin-top: 2rem;
     }
 
     .three-icons {
@@ -502,6 +503,10 @@ h1 {
         justify-content: center;
         gap: 2rem;
         align-items: center;
+    }
+
+    .img-text {
+        display: block;
     }
 
     .location {
@@ -534,9 +539,14 @@ h1 {
     .hero4-car {
         width: 25rem;
     }
+    .btn-4 {
+        display: flex;
+        justify-content: center;
+    }
 
     .lista-carros {
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
